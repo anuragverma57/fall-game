@@ -33,6 +33,20 @@ document.addEventListener("keyup", event => {
     both=0;
 });
 
+leftbtn.addEventListener("mouseover", event => {
+        interval = setInterval(moveLeft, 1);
+    });
+leftbtn.addEventListener("mouseout", event => {
+        clearInterval(interval);
+    });    
+rightbtn.addEventListener("mouseover", event => {
+        interval = setInterval(moveRight, 1);
+    });
+rightbtn.addEventListener("mouseout", event => {
+        clearInterval(interval);
+    });
+
+
 var blocks = setInterval(function(){
     var blockLast = document.getElementById("block"+(counter-1));
     var holeLast = document.getElementById("hole"+(counter-1));

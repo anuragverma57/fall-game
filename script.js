@@ -34,17 +34,25 @@ document.addEventListener("keyup", event => {
 });
 
 leftbtn.addEventListener("mouseover", event => {
+    if(both==0){
+        both++;
         interval = setInterval(moveLeft, 1);
-    });
+    }
+});
 leftbtn.addEventListener("mouseout", event => {
         clearInterval(interval);
-    });    
+        both = 0;
+});    
 rightbtn.addEventListener("mouseover", event => {
+    if(both==0){
+        both++;
         interval = setInterval(moveRight, 1);
-    });
+    }
+});
 rightbtn.addEventListener("mouseout", event => {
+        both = 0;
         clearInterval(interval);
-    });
+});
 
 
 var blocks = setInterval(function(){

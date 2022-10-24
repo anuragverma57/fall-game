@@ -33,23 +33,23 @@ document.addEventListener("keyup", event => {
     both=0;
 });
 
-leftbtn.addEventListener("mouseover", event => {
+leftbtn.addEventListener("mousedown", event => {
     if(both==0){
         both++;
         interval = setInterval(moveLeft, 1);
     }
 });
-leftbtn.addEventListener("mouseout", event => {
+leftbtn.addEventListener("mouseup", event => {
         clearInterval(interval);
         both = 0;
 });    
-rightbtn.addEventListener("mouseover", event => {
+rightbtn.addEventListener("mousedown", event => {
     if(both==0){
         both++;
         interval = setInterval(moveRight, 1);
     }
 });
-rightbtn.addEventListener("mouseout", event => {
+rightbtn.addEventListener("mouseup", event => {
         both = 0;
         clearInterval(interval);
 });
